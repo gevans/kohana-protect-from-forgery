@@ -160,7 +160,7 @@ class CSRF_Security extends Kohana_Security
 		else
 		{
 			// If the CSRF token is missing in the POST params, fallback to header
-			$token = $this->request->headers('X-CSRF-Token');
+			$token = $request->headers('x-csrf-token');
 		}
 
 		if (Security::check($token))
